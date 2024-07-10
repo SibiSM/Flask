@@ -10,6 +10,6 @@ RUN apk --update --upgrade add --no-cache  gcc musl-dev jpeg-dev zlib-dev libffi
 RUN python -m pip install --upgrade pip
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-EXPOSE 5000
+EXPOSE 8000
 COPY . .
 CMD [ "python", "app.py" ]
